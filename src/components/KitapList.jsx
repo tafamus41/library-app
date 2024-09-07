@@ -2,7 +2,7 @@ import { Col } from "react-bootstrap";
 import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
 
-const KitapList = ({books}) => {
+const KitapList = ({books,deleteKitap}) => {
 console.log(books);
   return (
     <Col>
@@ -32,7 +32,7 @@ console.log(books);
                   type="button"
                   size={22}
                   className="text-danger cursor-pointer"
-                //   onClick={() => deleteBilgi()}
+                  onClick={() => deleteKitap(id)}
                 />
 
                 <FaEdit
