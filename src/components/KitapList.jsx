@@ -34,7 +34,6 @@ const KitapList = ({books,deleteKitap}) => {
                   className="text-danger cursor-pointer mx-3"
                   onClick={() => deleteKitap(id)}
                 />
-
                 <FaEdit
                   data-bs-toggle="modal"
                   data-bs-target="#editModal"
