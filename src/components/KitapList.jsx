@@ -3,6 +3,7 @@ import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
 
 const KitapList = ({books,deleteKitap}) => {
+    console.log(books);
   return (
     <Col>
 <table className="table table-striped">
@@ -30,7 +31,7 @@ const KitapList = ({books,deleteKitap}) => {
                 <AiFillDelete
                   type="button"
                   size={22}
-                  className="text-danger cursor-pointer"
+                  className="text-danger cursor-pointer mx-3"
                   onClick={() => deleteKitap(id)}
                 />
 
@@ -40,7 +41,7 @@ const KitapList = ({books,deleteKitap}) => {
                   size={20}
                   type="button"
                   className="me-2 text-warning cursor-pointer"
-                  onClick={() => ({  })}
+                //   onClick={() => ({  })}
                 />
               </td>
             </tr>

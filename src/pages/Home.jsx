@@ -6,7 +6,7 @@ import axios from "axios";
 
 const Home = () => {
   const[books,setBooks]=useState([])
-  const url = "https://clarus-library-api.vercel.app/books/";
+  const url = "https://clarus-library-api.vercel.app/books";
 
   const getBilgiler = async () => {
     const res = await axios.get(url);
@@ -18,14 +18,21 @@ useEffect(()=>{
 },[])
 
 const deleteKitap = async(id) => {
-await axios.delete(`${url}:${id}`)
+await axios.delete(`${url}/:${id}`)
 getBilgiler()
 }
 
+const postKitap=async(yeniKitap)=>{
+  await axios.post(url, yeniKitap )
+  
+  getBilgiler()
+  
+  }
+  
   return (
     <Row>
       <h1 className="text-center mt-4">TAFAMUS41 LİBRARY</h1>
-      <KitapForm />
+      <KitapForm postKitap={postKitap}/>
       <KitapList books={books} deleteKitap={deleteKitap}/>
     </Row>
   );
