@@ -17,6 +17,11 @@ useEffect(()=>{
   getBilgiler();
 },[])
 
+const deleteKitap=async(id)=>{
+await axios.delete(`$(url)$(id)/`)
+getBilgiler()
+}
+
   return (
     <Row>
       <h1 className="text-center mt-4">TAFAMUS41 LİBRARY</h1>
