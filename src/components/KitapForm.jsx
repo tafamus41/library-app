@@ -13,23 +13,23 @@ function KitapForm() {
         <Form.Control type="text" placeholder="Yazar Adı" />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Label>ISBN</Form.Label>
+        <Form.Control type="TEXT" placeholder="ISBN" />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
+        <Form.Label>Kapak Resmi</Form.Label>
+        <Form.Control type="text" placeholder="Kapak Resmi" />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Label>Tür</Form.Label>
+        <Form.Control type="text" placeholder="Tür" />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
+        <Form.Label>Yayınlanma Tarihi</Form.Label>
+        <Form.Control type="text" placeholder="Yayınlanma Tarihi" />
       </Form.Group>
 
-      <Button variant="primary" type="submit">
+      <Button className="m-auto" variant="danger" type="submit">
         Submit
       </Button>
     </Form>
