@@ -1,5 +1,6 @@
 import { Row } from "react-bootstrap";
 import KitapForm from "../components/KitapForm";
+import KitapList from "../components/KitapList";
 import { useEffect } from "react";
 import axios from "axios";
 
@@ -18,6 +19,7 @@ useEffect(()=>{
     <Row>
       <h1 className="text-center mt-4">TAFAMUS41 LİBRARY</h1>
       <KitapForm />
+      <KitapList/>
     </Row>
   );
 };
