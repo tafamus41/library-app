@@ -9,24 +9,32 @@ const Home = () => {
   const url = "https://clarus-library-api.vercel.app/books";
 
   const getBilgiler = async () => {
+    try{
     const res = await axios.get(url);
     // console.log(res.data);
     setBooks(res.data)
-  };
+  }catch(error){
+    console.error("Error fetching books:", error);
+  }}
 useEffect(()=>{
   getBilgiler();
 },[])
 
 const deleteKitap = async(id) => {
-await axios.delete(`${url}/:${id}`)
-getBilgiler()
+try {await axios.delete(`${url}/${id}`)
+getBilgiler();}
+catch (error){
+  console.error("Error deleting book:", error);
+}
 }
 
 const postKitap=async(yeniKitap)=>{
-  await axios.post(url, yeniKitap )
-  
-  getBilgiler()
-  
+  try {
+    await axios.post(url, yeniKitap);
+    getBilgiler();
+  } catch (error) {
+    console.error("Error adding book:", error);
+  }
   }
   
   return (

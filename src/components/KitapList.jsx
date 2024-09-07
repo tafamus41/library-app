@@ -3,7 +3,7 @@ import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
 
 const KitapList = ({books,deleteKitap}) => {
-    console.log(books);
+    // console.log(books);
   return (
     <Col>
 <table className="table table-striped">
@@ -22,7 +22,7 @@ const KitapList = ({books,deleteKitap}) => {
           {books.map(({title,ISBN,image,genre,id,author,publicationYear }) => (
             <tr key={id}>
               <td>{ISBN}</td>
-              <td><img src={image} alt="" style={{ width: '100px', height:'100px'}}/></td>
+              <td><img src={image} alt={title} style={{ width: '100px', height:'100px'}}/></td>
               <td>{title}</td>
               <td>{author}</td>
               <td>{genre}</td>
