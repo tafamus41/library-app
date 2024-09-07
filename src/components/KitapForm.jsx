@@ -28,7 +28,7 @@ function KitapForm() {
         <Form.Label>Yayınlanma Tarihi</Form.Label>
         <Form.Control type="text" placeholder="Yayınlanma Tarihi" />
       </Form.Group>
-      <Button className="display-block m-auto" variant="danger" type="submit">
+      <Button className="d-block mx-auto" variant="danger" type="submit">
         Submit
       </Button>
     </Form>
