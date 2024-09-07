@@ -1,15 +1,15 @@
 
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import Home from "./pages/Home";
+import { Container } from "react-bootstrap";
 
 
 
 function App() {
   return (
-    <div >
+    <Container >
    <Home/>
-    </div>
+    </Container>
   );
 }
 
