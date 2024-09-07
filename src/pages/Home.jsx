@@ -17,7 +17,7 @@ useEffect(()=>{
   getBilgiler();
 },[])
 
-const deleteKitap=async(id)=>{
+const deleteKitap = async(id) => {
 await axios.delete(`${url}:${id}`)
 getBilgiler()
 }

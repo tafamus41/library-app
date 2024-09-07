@@ -3,7 +3,6 @@ import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
 
 const KitapList = ({books,deleteKitap}) => {
-console.log(books);
   return (
     <Col>
 <table className="table table-striped">
