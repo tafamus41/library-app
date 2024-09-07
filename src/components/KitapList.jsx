@@ -1,6 +1,7 @@
 
 
-const KitapList = () => {
+const KitapList = ({books}) => {
+console.log(books);
   return (
     <div>KitapList</div>
   )
