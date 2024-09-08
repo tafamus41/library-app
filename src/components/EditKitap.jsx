@@ -3,10 +3,11 @@ import Modal from 'react-bootstrap/Modal';
 
 const EditKitap = () => {
   return (
-    <div>
-      EditKitap
+    
+      
       <div
         className="modal show"
+        id='editModal'
         style={{ display: "block", position: "initial" }}
       >
         <Modal.Dialog>
@@ -19,12 +20,12 @@ const EditKitap = () => {
           </Modal.Body>
 
           <Modal.Footer>
-            <Button variant="secondary">Close</Button>
+            
             <Button variant="primary">Save changes</Button>
           </Modal.Footer>
         </Modal.Dialog>
       </div>
-    </div>
+    
   );
 };
 

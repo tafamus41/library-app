@@ -37,11 +37,21 @@ const postKitap=async(yeniKitap)=>{
   }
   }
   
+  const putKitap=async(editKitap)=>{
+
+    console.log(editKitap);
+    
+  await axios.put(`${url}/${editKitap.id}`,editKitap)
+  
+  
+  getBilgiler()
+  }
+
   return (
     <Row>
       <h1 className="text-center mt-4">TAFAMUS41 LİBRARY</h1>
       <KitapForm postKitap={postKitap}/>
-      <KitapList books={books} deleteKitap={deleteKitap}/>
+      <KitapList books={books} deleteKitap={deleteKitap} putKitap={putKitap}/>
     </Row>
   );
 };
