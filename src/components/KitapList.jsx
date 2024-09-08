@@ -1,9 +1,12 @@
 import { Col } from "react-bootstrap";
 import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
+import { useState } from "react";
+import EditKitap from "./EditKitap";
 
-const KitapList = ({books,deleteKitap}) => {
+const KitapList = ({books,deleteKitap,putKitap}) => {
     // console.log(books);
+    const[editItem,setEditItem]=useState("")
   return (
     <Col>
 <table className="table table-striped">
@@ -40,13 +43,14 @@ const KitapList = ({books,deleteKitap}) => {
                   size={20}
                   type="button"
                   className="me-2 text-warning cursor-pointer"
-                //   onClick={() => ({  })}
+                  onClick={() => setEditItem({title,ISBN,image,genre,id,author,publicationYear})}
                 />
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      <EditKitap editItem={editItem} setEditItem={setEditItem} putKitap={putKitap} />
     </Col>
   )
 }
