@@ -39,7 +39,7 @@ const postKitap=async(yeniKitap)=>{
   
   const putKitap=async(editKitap)=>{
 
-    console.log(editKitap);
+    // console.log(editKitap);
     
   await axios.put(`${url}/${editKitap.id}`,editKitap)
   

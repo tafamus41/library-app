@@ -1,5 +1,3 @@
-
-
 const EditKitap = ({editItem, setEditItem, putKitap }) => {
     console.log(editItem);
   return (
